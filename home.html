@@ -4,8 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+
+    <div class="bg-[#F9F7F3]">
+        <div class="max-w-[1140px] mx-auto"o">
+            <div class="navbar">
+                <div class="navbar-start">
+                    
+                    <button class="btn bg-[#B4F461] text-xl font-semibold text-[#111111]">Blog</button>
+                </div>
+                <div class="navbar-center">
+                 <img src="./images/logo.png" alt="">
+                 <p>Donate To Help People</p>
+                </div>
+                <div class="navbar-end">
+                  <img src="images/coin.png" alt="">
+                  <h3 class="text-2xl font-semibold"><span id="main_amount">5500 </span> BDT</h3>
+                </div>
+              </div>
+        </div>
+    </div>
+    <!-- nav bar part end -->
+
+    <div class="max-w-[1140px] mx-auto">
+
+
+        <div>
+             <button class="bg-[#B4F461] text-[#111111] text-xl font-semibold py-4 px-8 rounded-md border border-solid border-[#b4F461]" id="donation_btn">Donation</button>
+
+             <button class="BG-WHITE text-[#111111] text-xl font-semibold py-4 px-8 rounded-md border bolrder-solid border-[#1111]/30" id=""history_btn>History</button>
+        </div>
+        <!-- buttons -->
+
+        <div class="flex gap-x-8 my-3">
+            <div>
+                <img src="images/noakhali.png" alt="">
+            </div>
+            <div>
+                <div class="flex items-center gap-x-[2px]">
+                    <img src="images/coin.png" alt="">
+                  <h3 class="text-2xl font-semibold" > <span id="noakhali_amount">500</span> BDT</h3>
+                </div>
+
+                <input type="text" placeholder="Write Donation Amount" class="px-2 py-3 border border-solid border-red-600 rounded-md" id="noakhali_input">
+
+                <button class="bg-[#B4F461] text-[#111111] text-xl font-semibold py-4 px-8 rounded-md border border-solid border-[#b4F461]" id="noakhali_btn">Donate now</button>
+                
+            </div>
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+    
 
 
     <script src="js/Home.js"></script>
