@@ -1,6 +1,26 @@
-
-
 const noakhaliBtn = document.getElementById("noakhali_btn");
+
+const modal = document.getElementById("modal");
+const modalCloseBtn = document.getElementById("modal_close");
+
+modalCloseBtn.addEventListener("click", (e)=>{
+    closeModal();
+})
+
+
+function closeModal(){
+    modal.classList.add("hidden","modal-hide");
+    modal.classList.remove("modal-show");
+    
+}
+
+
+function openModal() {
+    modal.classList.add("modal-show");
+    modal.classList.remove("hidden", "modal-hide");
+
+}
+
 
 
 noakhaliBtn.addEventListener("click", (e)=>{
@@ -27,7 +47,14 @@ noakhaliBtn.addEventListener("click", (e)=>{
         document.getElementById("noakhali_amount").innerText = newAmountNoakhali
         document.getElementById("main_amount").innerText = newMainAmount;
 
+    
+        document.getElementById("noakhali_input").value = "";
+        openModal();
+
     }
 
 
 })
+
+
+
