@@ -2,6 +2,7 @@ const noakhaliBtn = document.getElementById("noakhali_btn");
 const feniBtn = document.getElementById("feni_btn");
 const quotaBtn = document.getElementById("quota_btn");
 
+
 const donationPart = document.getElementById("donation_part");
 const transactionPart = document.getElementById("transaction_part");
 
@@ -59,16 +60,19 @@ noakhaliBtn.addEventListener("click", (e)=>{
         document.getElementById("noakhali_amount").innerText = newAmountNoakhali
         document.getElementById("main_amount").innerText = newMainAmount;
 
-    
+        
         document.getElementById("noakhali_input").value = "";
+
+        // modal close function
         openModal("noakhali_modal");
 
+        // transaction history function
+        transaction(noakhaliInputNumber, "Flood Relief in Noakhali, Bangladesh");
+       
     }
 
 
 })
-
-
 
 
 
@@ -98,7 +102,12 @@ feniBtn.addEventListener("click", (e)=>{
 
     
         document.getElementById("feni_input").value = "";
+
+        // modal close function
         openModal("feni_modal");
+
+        // transaction history function
+        transaction(feniInputNumber, "Flood Relief in Feni, Bangladesh");
 
     }
 
@@ -131,7 +140,12 @@ quotaBtn.addEventListener("click", (e)=>{
 
     
         document.getElementById("quota_input").value = "";
+
+        //modal close function 
         openModal("quota_modal");
+
+        // transaction history function
+        transaction(quotaInputNumber, "Injured in the Quota Movement");
 
     }
 
