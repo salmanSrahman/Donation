@@ -2,6 +2,27 @@ const noakhaliBtn = document.getElementById("noakhali_btn");
 const feniBtn = document.getElementById("feni_btn");
 const quotaBtn = document.getElementById("quota_btn");
 
+window.addEventListener("scroll", function() {
+    const header = document.getElementById("header");
+  
+    if (window.scrollY > 30) { 
+      header.classList.add("bg-white/90");  
+      header.classList.remove("bg-[#F9F7F3]");
+    } else {
+      header.classList.add("bg-[#F9F7F3]");  
+      header.classList.remove("bg-white/90"); 
+    }
+  });
+//   bg change with scroll function
+
+
+  document.getElementById("blog_btn").addEventListener("click", ()=>{
+    window.location.href = "/blog.html"
+  });
+// routing from home page to blog page
+  
+  
+
 
 const donationPart = document.getElementById("donation_part");
 const transactionPart = document.getElementById("transaction_part");
@@ -34,10 +55,11 @@ historyBtn.addEventListener("click", ()=>{
     historyBtn.classList.add("bg-[#B4F461]", "border-[#b4F461]");
 })
 
+// routing & active button between donate & history
+
 
 
 noakhaliBtn.addEventListener("click", (e)=>{
-
     const mainAmountNumber = amountText("main_amount")
     const noakhaliAmountNumber = amountText("noakhali_amount");
     const noakhaliInputNumber = amountInputValue("noakhali_input");
@@ -71,8 +93,8 @@ noakhaliBtn.addEventListener("click", (e)=>{
        
     }
 
-
 })
+// donation fuinction for noakhali
 
 
 
@@ -108,11 +130,12 @@ feniBtn.addEventListener("click", (e)=>{
 
         // transaction history function
         transaction(feniInputNumber, "Flood Relief in Feni, Bangladesh");
-
     }
 
-
 })
+// donation fuinction for feni
+
+
 
 quotaBtn.addEventListener("click", (e)=>{
 
@@ -146,11 +169,12 @@ quotaBtn.addEventListener("click", (e)=>{
 
         // transaction history function
         transaction(quotaInputNumber, "Injured in the Quota Movement");
-
     }
 
-
 })
+// donation fuinction for quota movement
+
+
 
 document.getElementById("noakhali_modal_close").addEventListener("click", (e)=>{
     modalClose("noakhali_modal")
@@ -166,6 +190,7 @@ document.getElementById("quota_modal_close").addEventListener("click", (e)=>{
     modalClose("quota_modal")
 
 });
+// all three modal close function
 
 
 

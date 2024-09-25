@@ -3,49 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
 
-    <div class="bg-[#F9F7F3]">
+    <div class="bg-[#F9F7F3] sticky w-full top-0 left-0 z-40 transition-colors duration-300 pb-4" id="header">
         <div class="max-w-[1140px] mx-auto p-2.5">
             <div class="flex justify-between">
-                <div class="">
-                    <a href="/blog.html">
-                        <button class="btn bg-[#B4F461] text-xl font-semibold text-[#111111]">Blog</button>
-                    </a>
+                <div>
+                <button class="btn bg-[#B4F461] text-xl font-semibold text-[#111111]" id="blog_btn">Blog</button>
                 </div>
-                <div class="hidden md:flex gap-2 justify-center items-center flex-col md:flex-row">
+                <div class="flex-col items-center justify-center hidden gap-2 md:flex md:flex-row">
                  <img src="./images/logo.png" alt="" class="w-[40px] h-auto mx-auto">
                  <p class="text-lg font-medium text-[#111111]">Donate To Help People</p>
                 </div>
                 <div class="flex items-center">
                   <img src="images/coin.png" alt="">
-                  <h3 class="text-xl md:text-2xl font-semibold"><span id="main_amount">5500 </span> BDT</h3>
+                  <h3 class="text-xl font-semibold md:text-2xl"><span id="main_amount">5500 </span> BDT</h3>
                 </div>
               </div>
+              <div class="flex justify-center mt-20">
+                <div class="flex flex-wrap justify-center gap-2">
+                <button class="w-[180px] md:w-[300px] bg-[#B4F461] text-[#111111] text-xl font-semibold py-4 px-8 rounded-md border border-solid border-[#b4F461]" id="donation_btn">Donation</button>
+   
+                <button class="w-[180px] md:w-[300px] text-[#111111] text-xl font-semibold py-4 px-8 rounded-md border bolrder-solid border-[#1111]/30" id="history_btn">History</button>
+                </div>
+           </div>
         </div>
     </div>
     <!-- nav bar part end -->
 
     <div class="max-w-[1140px] mx-auto p-2.5">
 
-        <div class="mt-10 md:mt-24">
-            <div class="flex justify-center">
-                <div class="flex gap-2 flex-wrap justify-center">
-                <button class="w-[180px] md:w-[300px] bg-[#B4F461] text-[#111111] text-xl font-semibold py-4 px-8 rounded-md border border-solid border-[#b4F461]" id="donation_btn">Donation</button>
-   
-                <button class="w-[180px] md:w-[300px] text-[#111111] text-xl font-semibold py-4 px-8 rounded-md border bolrder-solid border-[#1111]/30" id="history_btn">History</button>
-                </div>
-           </div>
-           <!-- buttons -->
-
+        <div class="pb-4 mt-3">
             <div id="donation_part">
                 <div class="relative mt-[100px]" id="noakhali_part">
-                    <div class="flex flex-wrap md:flex-nowrap gap-y-4 md:gap-y-0 gap-x-8 my-3 items-center">
+                    <div class="flex flex-wrap items-center my-3 md:flex-nowrap gap-y-4 md:gap-y-0 gap-x-8">
                         <div class="w-full md:w-5/12">
                             <img src="images/noakhali.png" alt="" class="w-full">
                         </div>
@@ -63,18 +59,18 @@
                             
                         </div>
                     </div>
-                    <div class="w-[55%] hidden bg-white rounded-md p-3 shadow-md  text-center absolute top-[33%] md:-top-[23%] left-[25%] border border-solid border-black/20" id="noakhali_modal">
+                    <div class="w-[55%] hidden bg-white rounded-md p-3 shadow-md  text-center absolute top-[33%] md:-top-[23%] left-[25%] border border-solid border-black/20 z-50" id="noakhali_modal">
                         <h1 class="text-[#111111]/90 text-2xl md:text-3xl font-semibold my-4">Congrates!</h1>
                         <img src="images/coin.png" alt="" class="w-[30px] h-auto mx-auto my-4">
                         <p class="text-[#111111]/70 text-base md:text-xl leading-[26px] mb-3">You have donated for human kind.</p>
                         <h4 class="text-[#111111]/90 text-xl md:text-2xl font-semibold my-4">Succesfully</h4>
-                        <button class="btn my-4" id="noakhali_modal_close">Close Confirmation</button>
+                        <button class="my-4 btn" id="noakhali_modal_close">Close Confirmation</button>
                     </div>
                 </div>
                 <!-- Noakhali donation part end -->
 
                 <div class="relative mt-[100px]" id="feni_part">
-                    <div class="flex flex-wrap md:flex-nowrap gap-y-4 md:gap-y-0 gap-x-8 my-3 items-center">
+                    <div class="flex flex-wrap items-center my-3 md:flex-nowrap gap-y-4 md:gap-y-0 gap-x-8">
                         <div class="w-full md:w-5/12">
                             <img src="images/feni.png" alt="" class="w-full">
                         </div>
@@ -92,18 +88,18 @@
                             
                         </div>
                     </div>
-                    <div class="w-[55%] hidden bg-white rounded-md p-3 shadow-md  text-center absolute top-[33%] md:-top-[23%] left-[25%] border border-solid border-black/20" id="feni_modal">
+                    <div class="w-[55%] hidden bg-white rounded-md p-3 shadow-md  text-center absolute top-[33%] md:-top-[23%] left-[25%] border border-solid border-black/20 z-50" id="feni_modal">
                         <h1 class="text-[#111111]/90 text-2xl md:text-3xl font-semibold my-4">Congrates!</h1>
                         <img src="images/coin.png" alt="" class="w-[30px] h-auto mx-auto my-4">
                         <p class="text-[#111111]/70 text-base md:text-xl leading-[26px] mb-3">You have donated for human kind.</p>
                         <h4 class="text-[#111111]/90 text-xl md:text-2xl font-semibold my-4">Succesfully</h4>
-                        <button class="btn my-4" id="feni_modal_close">Close Confirmation</button>
+                        <button class="my-4 btn" id="feni_modal_close">Close Confirmation</button>
                     </div>
                 </div>
                 <!-- Feni donation part end -->
 
                 <div class="relative mt-[100px]" id="quota_part">
-                    <div class="flex flex-wrap md:flex-nowrap gap-y-4 md:gap-y-0 gap-x-8 my-3 items-center">
+                    <div class="flex flex-wrap items-center my-3 md:flex-nowrap gap-y-4 md:gap-y-0 gap-x-8">
                         <div class="w-full md:w-5/12">
                             <img src="images/quota-protest.png" alt="" class="w-full">
                         </div>
@@ -121,12 +117,12 @@
                             
                         </div>
                     </div>
-                    <div class="w-[55%] hidden bg-white rounded-md p-3 shadow-md  text-center absolute top-[33%] md:-top-[23%] left-[25%] border border-solid border-black/20" id="quota_modal">
+                    <div class="w-[55%] hidden bg-white rounded-md p-3 shadow-md  text-center absolute top-[33%] md:-top-[23%] left-[25%] border border-solid border-black/20 z-50" id="quota_modal">
                         <h1 class="text-[#111111]/90 text-2xl md:text-3xl font-semibold my-4">Congrates!</h1>
                         <img src="images/coin.png" alt="" class="w-[30px] h-auto mx-auto my-4">
                         <p class="text-[#111111]/70 text-base md:text-xl leading-[26px] mb-3">You have donated for human kind.</p>
                         <h4 class="text-[#111111]/90 text-xl md:text-2xl font-semibold my-4">Succesfully</h4>
-                        <button class="btn my-4" id="quota_modal_close">Close Confirmation</button>
+                        <button class="my-4 btn" id="quota_modal_close">Close Confirmation</button>
                     </div>
                 </div>
 
@@ -137,26 +133,13 @@
             </div>
            <!-- donation part end -->
    
-          <div id="transaction_part" class=" hidden py-4">
+          <div id="transaction_part" class="hidden py-4 mt-4">
              
           </div>
           <!-- transaction part end -->
 
-         
-        
-
-
 
         </div>
-        
-
-
-      
-
-
-
-
-
 
 
     </div>
