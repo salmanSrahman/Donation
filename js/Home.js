@@ -76,8 +76,8 @@ noakhaliBtn.addEventListener("click", (e)=>{
         alert("You dont have enough balance.")
     }
     else{
-        let newAmountNoakhali = noakhaliAmountNumber + noakhaliInputNumber;
-        let newMainAmount = mainAmountNumber - noakhaliInputNumber;
+        let newAmountNoakhali = (noakhaliAmountNumber + noakhaliInputNumber).toFixed(2);
+        let newMainAmount = (mainAmountNumber - noakhaliInputNumber).toFixed(2);
 
         document.getElementById("noakhali_amount").innerText = newAmountNoakhali
         document.getElementById("main_amount").innerText = newMainAmount;
@@ -116,8 +116,8 @@ feniBtn.addEventListener("click", (e)=>{
         alert("You dont have enough balance.")
     }
     else{
-        let newAmountFeni = feniAmountNumber + feniInputNumber;
-        let newMainAmount = mainAmountNumber - feniInputNumber;
+        let newAmountFeni = (feniAmountNumber + feniInputNumber).toFixed(2);
+        let newMainAmount = (mainAmountNumber - feniInputNumber).toFixed(2);
 
         document.getElementById("feni_amount").innerText = newAmountFeni
         document.getElementById("main_amount").innerText = newMainAmount;
@@ -155,8 +155,8 @@ quotaBtn.addEventListener("click", (e)=>{
         alert("You dont have enough balance.")
     }
     else{
-        let newAmountQuota = quotaAmountNumber + quotaInputNumber;
-        let newMainAmount = mainAmountNumber - quotaInputNumber;
+        let newAmountQuota = (quotaAmountNumber + quotaInputNumber).toFixed(2);
+        let newMainAmount = (mainAmountNumber - quotaInputNumber).toFixed(2);
 
         document.getElementById("quota_amount").innerText = newAmountQuota
         document.getElementById("main_amount").innerText = newMainAmount;
@@ -190,7 +190,7 @@ document.getElementById("quota_modal_close").addEventListener("click", (e)=>{
     modalClose("quota_modal")
 
 });
-// all three modal close function
+// all three modal close
 
 
 
